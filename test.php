@@ -28,6 +28,12 @@
     {
         get_preferences($conn,"food_types");
     }
+    if($_POST['action']=="set_preference" && isset($_POST['preference']))
+    {
+        echo $_POST['preference'];
+        //set_preferences($conn,"food_types");
+    }
+
     //FONCTIONS
     function test_user($_usr,$_pwd,$conn)
     {
@@ -60,5 +66,10 @@
         } 
         echo json_encode($myArray);
         $conn->close();
+    }
+    
+    function set_preferences($conn)
+    {
+        
     }
 ?>

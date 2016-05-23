@@ -14,7 +14,7 @@
         }
         else
         {
-            echo "Error : user doesn't exist.";
+            header('Location: index.html#login_error');
         }
     }
     else
